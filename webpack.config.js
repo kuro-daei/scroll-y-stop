@@ -17,7 +17,7 @@ const babel = {
 
 var configs = {
   "production": {
-    entry: {"lib/scroll-y-stop.js": './src/scrollstop.js'},
+    entry: {"lib/scroll-y-stop.js": './src/scroll-y-stop.js'},
     output: { filename: "[name]" },
     plugins: [ uglify, defineProduction ],
     module: { loaders: [ babel ] },
