@@ -97,9 +97,9 @@ var ScrollStop = function ScrollStop(elm, sleep, limit){
     __.sleep = sleep;
     __.limit = limit;
     if(typeof __DEVELOP__ === 'undefined'){
-      __.log = function(msg){window.console.log(msg);};
-    }else{
       __.log = function(msg){return;};
+    }else{
+      __.log = function(msg){window.console.log(msg);};
     }
     __.stopping = false;
     __.setObservers();

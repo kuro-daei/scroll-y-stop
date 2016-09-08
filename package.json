@@ -1,6 +1,6 @@
 {
   "name": "scroll-y-stop",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "It force stops vertical scrolling.",
   "scripts": {
     "compile": "NODE_ENV=develop ./node_modules/.bin/webpack --watch",
