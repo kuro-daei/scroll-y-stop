@@ -4,7 +4,7 @@
  * @license Apache-2.0
  * Stop Scrolling when the target element appear in viewport.
  */
-/* globals $sf , __PRODUCTION__ */
+/* globals $sf , __DEVELOP__ */
 var ScrollStop = function ScrollStop(elm, sleep, limit){
   var __ = this;
 
@@ -96,7 +96,7 @@ var ScrollStop = function ScrollStop(elm, sleep, limit){
     __.elm = elm;
     __.sleep = sleep;
     __.limit = limit;
-    if(typeof __PRODUCTION__ === 'undefined'){
+    if(typeof __DEVELOP__ === 'undefined'){
       __.log = function(msg){window.console.log(msg);};
     }else{
       __.log = function(msg){return;};

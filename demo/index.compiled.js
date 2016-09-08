@@ -42,7 +42,34 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * ScrollStop trigger function
+	 * @author Eiji Kuroda
+	 * @license Apache-2.0
+	 * Stop Scrolling when the target element appear in viewport.
+	 */
+	
+	// import ScrollStop from './scroll-y-stop.js';
+	
+	var ScrollStop = __webpack_require__(1);
+	
+	document.addEventListener('DOMContentLoaded', function(){
+	  var target = document.querySelector('#target');
+	  var ss = new ScrollStop(target, 1.0, 5);
+	  target.addEventListener('scrollDisabled', function(){
+	    target.style.backgroundColor = '#FFFF00';
+	  }, false);
+	  target.addEventListener('scrollEnabled', function(){
+	    target.style.backgroundColor = '#00FF99';
+	  }, false);
+	}, false);
+
+
+/***/ },
+/* 1 */
+/***/ function(module, exports, __webpack_require__) {
 
 	/**
 	 * ScrollStop module
@@ -50,7 +77,7 @@
 	 * @license Apache-2.0
 	 * Stop Scrolling when the target element appear in viewport.
 	 */
-	/* globals $sf , __PRODUCTION__ */
+	/* globals $sf , __DEVELOP__ */
 	var ScrollStop = function ScrollStop(elm, sleep, limit){
 	  var __ = this;
 	
@@ -142,7 +169,7 @@
 	    __.elm = elm;
 	    __.sleep = sleep;
 	    __.limit = limit;
-	    if(typeof __PRODUCTION__ === 'undefined'){
+	    if(false){
 	      __.log = function(msg){window.console.log(msg);};
 	    }else{
 	      __.log = function(msg){return;};
@@ -166,4 +193,4 @@
 
 /***/ }
 /******/ ]);
-//# sourceMappingURL=scroll-y-stop.js.map
+//# sourceMappingURL=index.compiled.js.map

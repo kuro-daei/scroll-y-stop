@@ -1,10 +1,9 @@
 {
   "name": "scroll-y-stop",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "It force stops vertical scrolling.",
   "scripts": {
-    "compile:dev": "NODE_ENV=develop ./node_modules/.bin/webpack --watch",
-    "compile:prd": "NODE_ENV=production ./node_modules/.bin/webpack",
+    "compile": "NODE_ENV=develop ./node_modules/.bin/webpack --watch",
     "start": "./node_modules/.bin/webpack-dev-server --port 3000 --hot --inlne --content-base demo/"
   },
   "repository": {
@@ -12,7 +11,6 @@
     "url": "git+https://github.com/kuro-daei/scroll-y-stop.git"
   },
   "author": "Eiji Kuroda",
-  "main": "./lib/scroll-y-stop.js",
   "licenses": [
     {
       "type": "Apache-2.0",

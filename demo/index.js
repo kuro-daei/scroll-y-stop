@@ -7,7 +7,7 @@
 
 // import ScrollStop from './scroll-y-stop.js';
 
-var ScrollStop = require('./scroll-y-stop.js');
+var ScrollStop = require('../index.js');
 
 document.addEventListener('DOMContentLoaded', function(){
   var target = document.querySelector('#target');
