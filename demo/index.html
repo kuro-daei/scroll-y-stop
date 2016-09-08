@@ -26,6 +26,18 @@ div#target {
 </div>
 
 <script src='./scroll-y-stop.js'></script>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  var target = document.querySelector('#target');
+  var ss = new ScrollStop(target, 1.0, 5);
+  target.addEventListener('scrollDisabled', function(){
+    target.style.backgroundColor = '#FFFF00';
+  }, false);
+  target.addEventListener('scrollEnabled', function(){
+    target.style.backgroundColor = '#00FF99';
+  }, false);
+}, false);
+</script>
 
 </body>
 </html>

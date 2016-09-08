@@ -8,26 +8,19 @@ const uglify = new webpack.optimize.UglifyJsPlugin({
   output: {comments: false}
 });
 
-const babel = {
-  test: /scroll-y-stop\.js$/,
-  include: [path.resolve(__dirname, 'src')],
-  loader: 'babel-loader',
-  query: {presets: ['es2015']}
-};
-
 var configs = {
   "production": {
     entry: {"lib/scroll-y-stop.js": './src/scroll-y-stop.js'},
     output: { filename: "[name]" },
     plugins: [ uglify, defineProduction ],
-    module: { loaders: [ babel ] },
+    module: { },
   },
   "develop":{
-    entry: {"demo/scroll-y-stop.js": './src/index.js'},
+    entry: {"demo/scroll-y-stop.js": './src/scroll-y-stop.js'},
     output: { filename: "[name]" },
     devtool: 'source-map',
     plugins: [ ],
-    module: { loaders: [ babel ] },
+    module: { },
   }
 };
 
