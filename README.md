@@ -11,7 +11,7 @@ npm install scroll-y-stop
 ## Sample
 
 ```javascript
-var ScrollStop = require('scroll-y-stop').default;
+var ScrollStop = require('scroll-y-stop');
 var target = document.querySelector('#target');
 new ScrollStop(target, 1.0, 5);
 # stop scroll 5 times and each stop has 1 sec.
